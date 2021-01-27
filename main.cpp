@@ -25,8 +25,8 @@ int main()
     cout << "Podaj ilosc znakow: ";
     cin >> ilosc_znakow;
 
-    string password[ilosc_znakow];
-
+    string * password = new string[ilosc_znakow];
+    
     for(int i=0; i<ilosc_znakow; i++){
         int pomoc=ktora_tablica();
         switch(pomoc){
@@ -44,6 +44,8 @@ int main()
 
     for(int k=0; k<ilosc_znakow; k++)
         cout << password[k];
+
+    delete [] password;
 
     return 0;
 }

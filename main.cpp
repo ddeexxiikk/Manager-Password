@@ -7,7 +7,7 @@ using namespace std;
 
 int ktora_tablica(){
     srand(time(NULL));
-    int liczba = (rand()%3)+1;
+    int liczba=(rand()%3)+1;
     return liczba;
 }
 
@@ -26,10 +26,10 @@ int main()
     cout << "Podaj ilosc znakow: ";
     cin >> ilosc_znakow;
 
-    char password[ilosc_znakow];
+    string password[ilosc_znakow];
 
     for(int i=0; i<ilosc_znakow; i++){
-        switch(ktora_tablica){
+        switch(ktora_tablica()){
         case 1:
             password[i]=letter[(rand()%50)+0];
             break;
@@ -42,10 +42,9 @@ int main()
         }
     }
 
-    for(int i=0; i<ilosc_znakow; i++){
-        cout << password[i];
+    for(int j=0; j<ilosc_znakow; j++){
+        cout << password[j];
     }
-
 
     return 0;
 }

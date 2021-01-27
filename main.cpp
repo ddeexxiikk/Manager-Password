@@ -5,11 +5,10 @@
 
 using namespace std;
 
-char ktora_tablica(){
+int ktora_tablica(){
     srand(time(NULL));
-    int liczba_int = (rand()%3)+1;
-    char liczba_string = (char)liczba_int;
-    return liczba_string;
+    int liczba = (rand()%3)+1;
+    return liczba;
 }
 
 int main()
@@ -31,13 +30,13 @@ int main()
 
     for(int i=0; i<ilosc_znakow; i++){
         switch(ktora_tablica){
-        case "1":
+        case 1:
             password[i]=letter[(rand()%50)+0];
             break;
-        case "2":
+        case 2:
             password[i]=number[(rand()%10)+0];
             break;
-        case "3":
+        case 3:
             password[i]=symbol[(rand()%5)+0];
             break;
         }

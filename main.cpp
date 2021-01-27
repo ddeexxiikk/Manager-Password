@@ -6,7 +6,6 @@
 using namespace std;
 
 int ktora_tablica(){
-    srand(time(NULL));
     int liczba=(rand()%3)+1;
     return liczba;
 }
@@ -29,22 +28,22 @@ int main()
     string password[ilosc_znakow];
 
     for(int i=0; i<ilosc_znakow; i++){
-        switch(ktora_tablica()){
+        int pomoc=ktora_tablica();
+        switch(pomoc){
         case 1:
-            password[i]=letter[(rand()%50)+0];
+            password[i]=letter[(rand()%50)];
             break;
         case 2:
-            password[i]=number[(rand()%10)+0];
+            password[i]=number[(rand()%10)];
             break;
         case 3:
-            password[i]=symbol[(rand()%5)+0];
+            password[i]=symbol[(rand()%5)];
             break;
         }
     }
 
-    for(int j=0; j<ilosc_znakow; j++){
-        cout << password[j];
-    }
+    for(int k=0; k<ilosc_znakow; k++)
+        cout << password[k];
 
     return 0;
 }

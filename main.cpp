@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdlib>
 #include <ctime>
 #include <fstream>
 
@@ -30,7 +29,7 @@ int main()
         std::cout << password[k];
 
     std::ofstream file;
-    file.open(nazwa_aplikacji, std::ios::app);
+    file.open(nazwa_aplikacji, std::ios::out);
 
     for(int k=0; k<ilosc_znakow; k++)
         file << password[k];
